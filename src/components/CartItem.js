@@ -1,7 +1,7 @@
 import React from "react";
 import "./CartItem.css";
 
-function Cartitem() {
+function Cartitem({ quantity }) {
   return (
     <div className="CartItem">
       <div className="CartItem-image">
@@ -12,15 +12,16 @@ function Cartitem() {
       </div>
       <div className="CartItem-info">
         <div className="info-title">
-          <h2>Title</h2>
+          <h2>Macbook Pro</h2>
         </div>
-        <div className="info-stock"></div>
+        <div className="info-stock">In stock</div>
         <div className="item-actions">
           <div className="item-quantity">
-            <select name="cars" id="cars">
-              <option value="1"></option>
+            <select name="quantity" id="quantity">
+              <option value={quantity}>Qty: {quantity}</option>
             </select>
           </div>
+          <div class="item-actions-divider">|</div>
           <div className="item-delete">Delete</div>
         </div>
       </div>
