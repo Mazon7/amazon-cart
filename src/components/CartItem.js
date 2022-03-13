@@ -14,8 +14,10 @@ function Cartitem({ title, stock, image, price, quantity }) {
         <div className="info-stock">{stock}</div>
         <div className="item-actions">
           <div className="item-quantity">
-            <select name="quantity" id="quantity">
-              <option value={quantity}>Qty: {quantity}</option>
+            <select value={quantity}>
+              <option value="1">Qty: 1</option>
+              <option value="2">Qty: 2</option>
+              <option value="3">Qty: 3</option>
             </select>
           </div>
           <div className="item-actions-divider">|</div>
