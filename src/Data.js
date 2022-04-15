@@ -3,14 +3,14 @@ const items = [
     title: "Apple Macbook Pro",
     stock: "In Stock",
     image: "item-1.jpeg",
-    price: "1000.00",
+    price: "1000.0",
     quantity: 1,
   },
   {
     title: "Apple iPad Pro",
     stock: "In Stock",
     image: "item-2.jpg",
-    price: "769.00",
+    price: "169.0",
     quantity: 1,
   },
   {
@@ -31,7 +31,7 @@ const items = [
     title: "Oculus Quest 2 — Advanced All-In-One Virtual Reality Headset",
     stock: "In stock on January 2, 2020",
     image: "item-5.jpg",
-    price: "399.00",
+    price: "399.0",
     quantity: 1,
   },
   {
