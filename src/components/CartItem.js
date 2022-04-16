@@ -1,7 +1,15 @@
 import React from "react";
 import "./CartItem.css";
 
-function Cartitem({ title, stock, image, price, quantity }) {
+function Cartitem({
+  index,
+  title,
+  stock,
+  image,
+  price,
+  quantity,
+  changeItemQuantity,
+}) {
   return (
     <div className="CartItem">
       <div className="CartItem-image">
@@ -14,7 +22,10 @@ function Cartitem({ title, stock, image, price, quantity }) {
         <div className="info-stock">{stock}</div>
         <div className="item-actions">
           <div className="item-quantity">
-            <select value={quantity}>
+            <select
+              value={quantity}
+              onChange={(e) => changeItemQuantity(e, index)}
+            >
               <option value="1">Qty: 1</option>
               <option value="2">Qty: 2</option>
               <option value="3">Qty: 3</option>
