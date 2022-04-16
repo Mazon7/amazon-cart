@@ -3,6 +3,8 @@
   flex: 0.3;
   text-align: left;
   padding: 20px;
+  min-width: 300px;
+
 }
 
 .CartTotal button {
