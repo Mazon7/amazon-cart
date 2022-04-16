@@ -4,15 +4,12 @@ import "./CartItems.css";
 
 function CartItems({ items, setCartItems }) {
   const changeItemQuantity = (e, index) => {
-    console.log(e.target.value);
-    console.log("Index is", index);
     const newItems = [...items];
     newItems[index].quantity = e.target.value;
     setCartItems(newItems);
   };
 
   const deleteItem = (indexToDelete) => {
-    // setCartItems(newItems);
     const newItems = items.filter((value, index) => {
       return index !== indexToDelete;
     });

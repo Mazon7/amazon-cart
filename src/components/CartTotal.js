@@ -2,7 +2,7 @@ import React from "react";
 import "./CartTotal.css";
 import NumberFormat from "react-number-format";
 
-function CartTotal({ items, setCartItems }) {
+function CartTotal({ items }) {
   const getTotalPrice = () => {
     let total = 0;
     items.forEach((item) => {
@@ -14,7 +14,7 @@ function CartTotal({ items, setCartItems }) {
   const getSubTotal = () => {
     let totalQuantity = 0;
     items.forEach((item) => {
-      totalQuantity += item.quantity;
+      totalQuantity += parseInt(item.quantity);
     });
     return totalQuantity;
   };
