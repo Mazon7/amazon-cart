@@ -11,6 +11,14 @@ function CartItems({ items, setCartItems }) {
     setCartItems(newItems);
   };
 
+  const deleteItem = (indexToDelete) => {
+    // setCartItems(newItems);
+    const newItems = items.filter((value, index) => {
+      return index !== indexToDelete;
+    });
+    setCartItems(newItems);
+  };
+
   return (
     <div className="CartItems">
       <h1>Shopping Cart</h1>
@@ -24,6 +32,7 @@ function CartItems({ items, setCartItems }) {
           price={item.price}
           quantity={item.quantity}
           changeItemQuantity={changeItemQuantity}
+          deleteItem={deleteItem}
         />
       ))}
     </div>
